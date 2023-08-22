@@ -1,0 +1,14 @@
+# 引入 pandas 套件，使用別名 pd 可以少打字
+import pandas as pd
+
+# 準備傳入 
+source = {
+    'person': ['王小郭', '張小華', '廖丁丁', '丁小光'],
+    'contact': ['min@gmail.com', 'hchang@gmail.com', 'laioding@gmail.com', 'hsulight@gmail.com'],
+    'grades': [60, 77, 92, 43]
+}
+
+# 建立 DataFrame 物件
+person_df = pd.DataFrame(source)
+
+print(person_df)
