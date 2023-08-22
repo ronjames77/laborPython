@@ -1,0 +1,18 @@
+import openpyxl
+
+# 利用 Workbook 建立一個新的工作簿
+wb = openpyxl.Workbook()
+
+# 取得第一個工作表
+sh= wb.worksheets[0]
+# 新增工作表並指定放置位置
+wb.create_sheet("hello", 1) 
+sh1 = wb.worksheets[1]
+# 設定 sh 工作表 A1 儲存格內容為 "Hello Python, Hello Excel."
+# 設定 sh1 工作表 A1 儲存格內容為 'yammy.'
+sh['A1'] = 'Hello Python, Hello Excel.'
+sh1['A1'] = 'yammy.'
+
+        
+# 儲存檔案
+wb.save('test.xlsx')
